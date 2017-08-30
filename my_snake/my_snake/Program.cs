@@ -11,31 +11,21 @@ namespace my_snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw(p1.x, p1.y, p1.sym);
+            book b1 = new book(125, "Shrek", "Unknown");
+            book b2 = new book(300, "Nemo", "Dyuma");
+            book b3 = new book(450, "English-Russian dictionary", "AST");
+            /*b1.drawbook(b1.pages, b1.name, b1.author);
+            b2.drawbook(b2.pages, b2.name, b2.author);
+            b3.drawbook(b3.pages, b3.name, b3.author);*/
 
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw(p2.x, p2.y, p2.sym);
-
-            List<int> numlist = new List<int>();
-            numlist.Add(0);
-            numlist.Add(1);
-            numlist.Add(2);
-
-            int x = numlist[0];
-            int y = numlist[1];
-            int z = numlist[2];
-
-            foreach (int i in numlist)
+            List<book> booklist = new List<book>();
+            booklist.Add(b1);
+            booklist.Add(b2);
+            booklist.Add(b3);
+            foreach (book i in booklist)
             {
-                Console.WriteLine( i );
+                i.drawbook(i.pages, i.name, i.author);
             }
-
-            numlist.RemoveAt(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
             
             Console.ReadLine();
         }
