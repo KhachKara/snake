@@ -11,15 +11,23 @@ namespace my_snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw(p1.x, p1.y, p1.sym);
+            // Задал размер консоли
+            Console.SetWindowSize(100, 30);
 
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw(p2.x, p2.y, p2.sym);
+            // Нарисовал пямоугольник по краям консоли
+            HorizontalLine h1Line = new HorizontalLine(0, 99, 1, '*');
+            h1Line.Drow();
+            HorizontalLine h2Line = new HorizontalLine(0, 99, 29, '*');
+            h2Line.Drow();
+            VerticalLine v1Line = new VerticalLine(0, 0, 28, '*');
+            v1Line.Drow();
+            VerticalLine v2Line = new VerticalLine(99, 0, 28, '*');
+            v2Line.Drow();
 
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
-            line.Drow();          
-            
+            // Нарисовал точки
+            Point p = new Point(5, 10, '*');    // Задаем координаты точки и символ
+            p.Draw(5, 10, '*');                 // Не корректный синтаксис но работает
+     
             Console.ReadLine();
         }
     }
