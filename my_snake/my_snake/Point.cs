@@ -18,6 +18,33 @@ namespace my_snake
             y = _y;
             sym = _sym;
         }
+
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (direction == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (direction == Direction.TOP)
+            {
+                y = y + offset;
+            }
+            else if (direction == Direction.DOWn)
+            {
+                y = y - offset;
+            }
+        }
        
         public void Draw(int x, int y, char sym) // ??? у преподавателя не так, не задаются аргументы
         {

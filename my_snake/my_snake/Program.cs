@@ -27,7 +27,8 @@ namespace my_snake
 
             // Нарисовал точки
             Point p = new Point(4, 5, '*');    // Задаем координаты точки и символ
-            p.Draw(4, 5, '*');                 // Не корректный синтаксис но работает
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Drow();
      
             Console.ReadLine();
         }
