@@ -12,21 +12,22 @@ namespace my_snake
         static void Main(string[] args)
         {
             // Задал размер консоли
-            Console.SetWindowSize(100, 30);
+            Console.SetWindowSize(80, 25);      // принудительно задаем размер консоли 
+            Console.SetBufferSize(80, 25);      // установливаем размер окна и убираем возможность перемотки
 
             // Нарисовал пямоугольник по краям консоли
-            HorizontalLine h1Line = new HorizontalLine(0, 99, 1, '*');
+            HorizontalLine h1Line = new HorizontalLine(0, 78, 0, '*');
             h1Line.Drow();
-            HorizontalLine h2Line = new HorizontalLine(0, 99, 29, '*');
+            HorizontalLine h2Line = new HorizontalLine(0, 78, 24, '*');
             h2Line.Drow();
-            VerticalLine v1Line = new VerticalLine(0, 0, 28, '*');
+            VerticalLine v1Line = new VerticalLine(0, 24, 0, '*');
             v1Line.Drow();
-            VerticalLine v2Line = new VerticalLine(99, 0, 28, '*');
+            VerticalLine v2Line = new VerticalLine(0, 24, 78, '*');
             v2Line.Drow();
 
             // Нарисовал точки
-            Point p = new Point(5, 10, '*');    // Задаем координаты точки и символ
-            p.Draw(5, 10, '*');                 // Не корректный синтаксис но работает
+            Point p = new Point(4, 5, '*');    // Задаем координаты точки и символ
+            p.Draw(4, 5, '*');                 // Не корректный синтаксис но работает
      
             Console.ReadLine();
         }
