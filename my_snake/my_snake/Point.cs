@@ -45,7 +45,19 @@ namespace my_snake
                 y = y - offset;
             }
         }
-       
+
+        public void Draw()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
+
         public void Draw(int x, int y, char sym) // ??? у преподавателя не так, не задаются аргументы
         {
             Console.SetCursorPosition(x, y);
