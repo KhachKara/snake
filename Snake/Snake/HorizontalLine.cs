@@ -20,11 +20,11 @@ namespace Snake
 
 		public override void Draw()
 		{
-			Console.ForegroundColor = ConsoleColor.Yellow;			
+			Console.ForegroundColor = ConsoleColor.Yellow;		// переопределение цвета текста	на желтый
 
-			base.Draw();
+			base.Draw();                                        // вызов базовова метода Draw базовова класса
 
-			Console.ForegroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.White;       // переопределение цвета текста	на белый
 		}
 	}
 }
