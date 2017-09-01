@@ -36,13 +36,13 @@ namespace my_snake
             {
                 x = x - offset;
             }
-            else if (direction == Direction.TOP)
-            {
-                y = y + offset;
-            }
-            else if (direction == Direction.DOWn)
+            else if (direction == Direction.UP)
             {
                 y = y - offset;
+            }
+            else if (direction == Direction.DOWN)
+            {
+                y = y + offset;
             }
         }
 

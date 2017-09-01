@@ -10,7 +10,7 @@ namespace my_snake
     {
         LEFT,
         RIGHT,
-        TOP,
-        DOWn
+        UP,
+        DOWN
     }
 }
